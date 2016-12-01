@@ -1,0 +1,17 @@
+numbers <- list
+right <- length of list
+left <- 1
+low <- range start position
+high <- range end position
+
+BINARY_SEARCH
+	while left < right
+		mid <- (left + right) / 2
+		if numbers[mid] > low and < high
+			RETURN true
+		else if numbers[mid] < low or > high
+			right <- mid - 1
+		else
+			left <- mid + 1
+		if nothing in low to high
+			RETURN false

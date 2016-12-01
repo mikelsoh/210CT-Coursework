@@ -1,0 +1,63 @@
+bigO = O(n^2)
+
+INPUT sizeOfMatrix
+INPUT matrixA
+INPUT matrixB
+INPUT matrixC
+
+ADDITION(sizeOfMatrix, matrixA, matrixB)
+	
+	for n <- 0 to sizeOfMatrix				//GOES THROUGH MATRIX'S ROWS
+		
+		for m <- 0 sizeOfMatrix				//GOES THROUGH MATRIX'S COLUMNS
+			
+			add <- matrixA[n,m] + matrixB[n,m]
+
+SUBTRACTION(sizeOfMatrix, matrixA, matrixB)
+
+	for n <- 0 to sizeOfMatrix
+
+		for m <- 0 to sizeOfMatrix
+
+			sub <- matrixA[n,m] - matrixB[n,m]
+
+MULTIPLICATION(sizeOfMatrix, matrixA, matrixB)
+
+	for n <- 0 to sizeOfMatrix - 2
+
+		for m <- n + 1 to sizeOfMatrix - 1
+
+			swap matrixA[n,m] with matrixA[m,n]
+
+	for n <- 0 to sizeOfMatrix
+
+		for m <- 0 to sizeOfMatrix
+
+			for o <- 0 to sizeOfMatrix
+
+				mult[n,m] += matrixA[n,o] * matrixB[o,m]
+
+MULTWNUM(sizeOfMatrix, matrixA, num)
+
+	for n <- 0 to num
+
+		for m <- 0 to num
+
+			multNum <- num * matrixA[n,m]
+	
+
+
+	
+// A = B*C - 2*(B+C)
+// matrixC = matrixB * matrixC - 2*(matrixB + matrixC)
+
+add <- ADDITION(sizeOfMatrix, matrixA, matrixB)
+mult <- MULTIPLICATION(sizeOfMatrix, matrixA, matrixB)
+multNum <- MULTWNUM(sizeOfMatrix, add, 2)
+sub <- SUBTRACTION(sizeOfMatrix, mult, multNum)
+
+FINAL(matrixA, mult, add, multNum, sub)
+
+
+			
+

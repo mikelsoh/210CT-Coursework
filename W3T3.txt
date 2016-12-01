@@ -1,0 +1,10 @@
+INPUT(word)
+
+REMOVE_VOWELS
+	while i < length of word
+		if word contains vowel
+			word.erase(vowel)
+			REMOVE_VOWELS(word, i + 1)
+		else
+			REMOVE_VOWELS(word, i + 1)
+	PRINT(word)

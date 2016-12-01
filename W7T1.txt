@@ -1,0 +1,12 @@
+graph <- dictionary[node:edges]
+
+ADDNODE(node, graph)
+	graph <- graph[node:[]]
+	RETURN graph
+
+ADDCONNECTION(node, edge, graph)
+	graph[node] <- graph[node : edge]
+	RETURN graph
+
+PRINT(graph)
+	

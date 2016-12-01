@@ -1,0 +1,10 @@
+INPUT(sentence)
+
+SENTENCE_REVERSE
+	while n != i
+		n <- sentence[lastWord]
+		i <- sentence[firstWord]
+		tempWord <- sentence[i]
+		sentence[i] <- sentence[n]
+		sentence[n] <- tempWord
+		SENTENCE_REVERSE(n - 1, i + 1)

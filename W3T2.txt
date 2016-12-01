@@ -1,0 +1,12 @@
+INPUT(number)
+
+CHECK_IF_PRIME(number, value, divider)
+	while value <= number
+		if number mod value == 0
+			CHECK_IF_PRIME(number, value + 1, divider + 1)
+		else
+			CHECK_IF_PRIME(nubmer, value + 1, divider)	
+	if divider == 2
+		PRINT(number is prime)
+	else 
+		PRINT(number is not prime)

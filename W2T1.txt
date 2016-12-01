@@ -1,0 +1,13 @@
+INPUT userInput
+
+i <- 1
+SQUARE_CHECK 
+	if i^2 = userInput		//CHECKS WHETHER THE SQUARED NUMBER IS EQUAL TO INPUT
+		solution <- userInput	
+	else if i^2 < userInput		//IF SQUARED NUMBER IS LOWER, GOES TO NEXT NUMBER
+		SQUARE_CHECK(i + 1)
+	else 
+		solution <- (i - 1)^2	//TAKES THE PREVIOUS SQUARE AS THE SOLUTION OF THE NEXT ONE
+					//WAS BIGGER THEN THE INPUT
+
+PRINT solution
